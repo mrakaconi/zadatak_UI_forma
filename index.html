@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./fonts/Roboto/Roboto-Regular.ttf rel='stylesheet' type='text/css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/styles.css" />
@@ -30,9 +31,30 @@
             </div>
         </div>
     </header>
-    
+    <form action="contact_request">
+        <div class="ime">
+        <label for="name">First Name</label>
+        <input type="text" name="first_name" placeholder="Pera">
+        </div>
+        <div class="prezime">
+        <label for="name">Last Name</label>
+        <input type="text" name="last_name" placeholder="Peric">
+        </div>
+        <div class="email">
+        <label for="name">Email Adresa</label>
+        <input type="email" name="email" placeholder="pera.peric@123.com">
+        </div>
+        <div class="pitanje">
+            <ul>Koje je najbolje vreme da Vas kontaktiramo</ul>
+                <li>Ponedeljak 3 posle podne</li>
+                <li>Utorak 3 posle podne</li>
+        </div>
+        <br>
+        <button type="submit">Posalji</button>
+    </form>
 
-
+    <input id="checkbox" type="checkbox"/>
+    <label for="checkbox" ></label>
 
 
 

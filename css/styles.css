@@ -11,6 +11,7 @@ html, body {
     justify-content: center;
     height: 100%;
     position: relative;
+
   }
   
   .progress-ring {
@@ -19,14 +20,65 @@ html, body {
   
   .progress-ring__circle {
     transition: 0.35s stroke-dashoffset;
-    // axis compensation
+    /* axis compensation */
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
   }
   
-  input {
+  .header-wrapper input {
     position: fixed;
     top: 10px;
     left: 10px;
     width: 80px;
   }
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input[type = checkbox] {
+  display: none;
+}
+
+input + label {
+  font-size: 14px;
+  width: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .1rem solid var(--blue);
+  border-radius: 50%;
+  background: var(--darkblue);
+  transition: .1s all;
+  cursor: pointer;
+  z-index: 999 !important;
+}
+
+input + label:hover {
+  transform: scale(.95);
+}
+
+input + label:after {
+  content: "🤜";
+}
+
+input:checked + label {
+  background: var(--blue);
+  transform: scale(1.1);
+}
+
+input:checked + label:hover {
+  background: var(--blue);
+  transform: scale(1.05);
+}
+
+input:checked + label:after {
+  content: "👍";
+}
+  
+ 
