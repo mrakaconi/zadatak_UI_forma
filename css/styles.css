@@ -8,9 +8,9 @@ body {
 #main-wrapper{
     max-width: 500px;
     background-color: white;
-    height: 700px;
+    height: 570px;
     position:relative;
-    margin: 3% auto;
+    margin: 2% auto;
     
 }
 .header-wrapper {
@@ -20,15 +20,13 @@ body {
     position: relative;
     text-align: center;
     padding-left: 20px; 
-  }
+}
 .header-wrapper h2, h3 {
     padding-left: 50px;
 }
-  
 .progress-ring {
     align-content: space-between
-  }
-  
+}
 .progress-ring__circle {
     transition: 0.35s stroke-dashoffset;
     /* axis compensation */
@@ -41,24 +39,10 @@ body {
     left: 10px;
     width: 80px;
 }
-
-
-#gore {
-    color: white;
-    background-color: #2196f3;
-    position: absolute;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 30px;
-
-}
 #procenat {
     border: 2px solid white;
     border-radius: 100%;
     padding: 4px;
-}
-.levo {
-    float: left;
 }
 #dva {
     margin-top: 30px;
@@ -69,7 +53,7 @@ body {
     margin-left : 20px
 }
 
-#dole {
+#form-wrapper {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -100,5 +84,19 @@ body {
     position: relative;
 }
 input {
-    outline: none
+    outline: none;
+    max-width: 400px;
 }
+#form-wrapper label {
+    padding-left: 40px;
+}
+#form-wrapper input {
+    margin-left: 20px;
+}
+.radio .label {
+    margin-top: 25px;
+}
+.radio .form-animation {
+    margin-top: 18px;
+}
+
