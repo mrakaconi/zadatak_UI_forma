@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #4e6cb5;
     font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, #1731c2, #00c3ff);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #main-wrapper{
     max-width: 500px;
@@ -11,8 +13,9 @@ body {
     height: 570px;
     position:relative;
     margin: 2% auto;
-    
+    border: 2px solid #c51919
 }
+
 .header-wrapper {
     background-color: #2962FF;
     display: flex;
@@ -23,15 +26,25 @@ body {
 }
 .header-wrapper h2, h3 {
     padding-left: 50px;
+    margin-top: 15px;
 }
 .progress-ring {
-    align-content: space-between
+    align-content: space-between;
+    
 }
+
+#progressbar {
+    display: none;
+}
+
+
 .progress-ring__circle {
     transition: 0.35s stroke-dashoffset;
     /* axis compensation */
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
+    text-decoration-color: red;
+    
 }
 .header-wrapper input {
     position: fixed;
@@ -39,20 +52,16 @@ body {
     left: 10px;
     width: 80px;
 }
+
 #procenat {
     border: 2px solid white;
     border-radius: 100%;
     padding: 4px;
+    position: absolute;
 }
 #dva {
     margin-top: 30px;
 }
-#jedan {
-    margin-top: 50px;
-    margin-right: 20px;
-    margin-left : 20px
-}
-
 #form-wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -68,9 +77,6 @@ body {
     font-size: 12px;
     text-align: center;
     line-height: 34px;
-}
-#procenat1 {
-    color: white;
 }
 
 #FirstName:focus {
