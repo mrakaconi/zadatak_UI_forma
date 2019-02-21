@@ -54,7 +54,7 @@ inputName.addEventListener("focusout", function () {
 inputSurname.addEventListener("focusout", function () {
     if (inputSurname.value.length > 2) {
         steps2.innerHTML = "&#10004;";
-        inputProgress.value = 50;
+        inputProgress.value = parseInt(inputProgress.value) + 25;
         mediumText.innerHTML = "50%"
         setProgress(inputProgress.value);
     } else {
