@@ -18,11 +18,13 @@
             <div class="header-wrapper">
                 <div class="row">
                     <div class="scale">
-                        <svg class="progress-ring" width="120" height="120">
+                        <svg class="progress-ring" width="120" height="120" placeholder="0%">
                             <circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent"
-                                r="52" cx="60" cy="60" />
+                                r="52" cx="60" cy="60" placeholder="0%" />
+                            <text fill="#ffffff" x="45" y="65" id="medium"></text>
                         </svg>
-                        <input value="35" type="number" step="5" min="0" max="100" placeholder="progress">
+                        
+                        <input id="progressbar" type="number" step="25" min="0" max="100">
                     </div>
                     <div>
                         <h3>Beograd</h3>
@@ -34,53 +36,43 @@
         <div id="form-wrapper">
             <form>
                 <div class="form-group" id="ime">
-                    <div class="neka float-label-control">
-                        <label for="FirstName float-label-control">First name</label>
-                        <div class="row form-animation">
-                            <span class="animation-circle">1</span>
-                            <input type="email" class="form-control " id="FirstName" aria-describedby="emailHelp">
-                        </div>
+                    <label for="FirstName float-label-control">First name</label>
+                    <div class="row form-animation">
+                        <span id="steps1" class="animation-circle steps">1</span>
+                        <input type="text" class="form-control " id="FirstName" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="LastName">Last name</label>
                     <div class="row form-animation">
-                        <span class="animation-circle">2</span>
-                        <input type="text" class="form-control" id="LastName" aria-describedby="emailHelp">
+                        <span id="steps2" class="animation-circle steps">2</span>
+                        <input type="text" class="form-control" id="LastName" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="LastName">Email address</label>
                     <div class="row form-animation">
-                        <span class="animation-circle">3</span>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span id="steps3" class="animation-circle steps">3</span>
+                        <input type="email" class="form-control" id="Email" required>
                     </div>
                 </div>
                 <div class="row radio">
                     <div class="form-animation">
-                        <span class="animation-circle">4</span>
+                        <span id="steps4" class="animation-circle steps">4</span>
                     </div>
                     <label class="label" for="optradio">What is the best time to contact you?</label>
-
-
-
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" checked>Monday 3pm</label>
+                    <label><input id="checkbox1" type="radio" name="optradio">Monday 3pm</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio">Tuesday 3pm</label>
+                    <label><input id="checkbox2" type="radio" name="optradio">Tuesday 3pm</label>
                 </div>
+                <br>
                 <button type="submit" class="btn btn-primary">Submit request</button>
             </form>
         </div>
     </div>
-
-
-
-
-
-
 
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
