@@ -23,6 +23,7 @@ inputProgress.addEventListener('change', function (e) {
 
 // kako uraditi animacije?
 const s = selektor => document.getElementById(selektor)
+const c = selektor => document.getElementsByClassName(selektor)
 
 const inputName = s("FirstName")
 const inputSurname = s("LastName")
@@ -32,65 +33,71 @@ const selectCheck2 = s("checkbox2")
 const addToProgress = s("#progressbar")
 const mediumText = s("medium")
 
-const steps1 = s("steps1")
-const steps2 = s("steps2")
-const steps3 = s("steps3")
-const steps4 = s("steps4")
+var steps = c("steps");
 
+
+
+var filled = [false, false, false, false];
+
+function isValid(i) {
+    if (!filled[i]) {
+        steps[i].innerHTML = "&#10004;";
+        inputProgress.value = parseInt(inputProgress.value) + 25;
+        mediumText.innerHTML = inputProgress.value + "%";
+        filled[i] = true;
+        setProgress(inputProgress.value);
+    } 
+}
+
+function isNotValid(i) {
+    if (filled[i]) {
+        steps[i].innerHTML = i+1;
+        inputProgress.value = parseInt(inputProgress.value) - 25;
+        mediumText.innerHTML = inputProgress.value + "%";
+        filled[i] = false;
+        setProgress(inputProgress.value); 
+    }
+}
 
 // Name polje
 inputName.addEventListener("focusout", function () {
     if (inputName.value.length > 2) {
-        steps1.innerHTML = "&#10004;";
-        inputProgress.value = 25;
-        mediumText.innerHTML = "25%"
-        setProgress(inputProgress.value); 
+        isValid(0); 
     } else {
-        steps1.innerHTML = "1";
+        isNotValid(0);
     }
-    
+
 });
 // Surname polje
 inputSurname.addEventListener("focusout", function () {
     if (inputSurname.value.length > 2) {
-        steps2.innerHTML = "&#10004;";
-        inputProgress.value = parseInt(inputProgress.value) + 25;
-        mediumText.innerHTML = "50%"
-        setProgress(inputProgress.value);
+        isValid(1); 
     } else {
-        steps2.innerHTML = "2";
+        isNotValid(1);
     }
 });
 // Email polje
 inputEmail.addEventListener("focusout", function () {
-    if (inputSurname.value.length > 2) {
-        steps3.innerHTML = "&#10004;";
-        inputProgress.value = 75;
-        mediumText.innerHTML = "75%"
-        setProgress(inputProgress.value);
+    if (inputEmail.value.length > 2) {
+        isValid(2); 
     } else {
-        steps3.innerHTML = "3";
+        isNotValid(2);
     }
-    
+
 });
 
 selectCheck1.addEventListener( 'change', function() {
     if(this.checked) {
-        steps4.innerHTML = "&#10004;"; 
-        inputProgress.value = 100;
-        mediumText.innerHTML = "100%"
-        setProgress(inputProgress.value);
+        isValid(3); 
     } else {
-        steps4.innerHTML = "4";
+        isNotValid(3);
     }
 });
 selectCheck2.addEventListener( 'change', function() {
     if(this.checked) {
-        steps4.innerHTML = "&#10004;"; 
-        inputProgress.value = 100;
-        mediumText.innerHTML = "100%"
-        setProgress(inputProgress.value);
+        isValid(3); 
     } else {
-        steps4.innerHTML = "4";
+        isNotValid(3);
     }
 });
+
