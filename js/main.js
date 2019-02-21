@@ -94,7 +94,3 @@ selectCheck2.addEventListener( 'change', function() {
         steps4.innerHTML = "4";
     }
 });
-
-
-
-
