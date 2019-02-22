@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     background-image: linear-gradient(to right, #1731c2, #00c3ff);
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +15,6 @@ body {
     margin: 2% auto;
     border: 2px solid #c51919
 }
-
 .header-wrapper {
     background-color: #2962FF;
     display: flex;
@@ -30,21 +29,15 @@ body {
 }
 .progress-ring {
     align-content: space-between;
-    
 }
-
 #progressbar {
     display: none;
 }
-
-
 .progress-ring__circle {
     transition: 0.35s stroke-dashoffset;
-    /* axis compensation */
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    text-decoration-color: red;
-    
+    text-decoration-color: red; 
 }
 .header-wrapper input {
     position: fixed;
@@ -52,7 +45,6 @@ body {
     left: 10px;
     width: 80px;
 }
-
 #procenat {
     border: 2px solid white;
     border-radius: 100%;
@@ -78,7 +70,6 @@ body {
     text-align: center;
     line-height: 34px;
 }
-
 #FirstName:focus {
     border-bottom: 2px blue solid;
     border-top: 0px;
@@ -101,6 +92,9 @@ input {
 }
 .radio .label {
     margin-top: 25px;
+}
+.radio input {
+    margin-right: 25px;
 }
 .radio .form-animation {
     margin-top: 18px;
