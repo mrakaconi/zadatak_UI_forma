@@ -46,32 +46,30 @@ function isValid(i) {
         mediumText.innerHTML = inputProgress.value + "%";
         filled[i] = true;
         setProgress(inputProgress.value);
-    } 
+    }
 }
 
 function isNotValid(i) {
     if (filled[i]) {
-        steps[i].innerHTML = i+1;
+        steps[i].innerHTML = i + 1;
         inputProgress.value = parseInt(inputProgress.value) - 25;
         mediumText.innerHTML = inputProgress.value + "%";
         filled[i] = false;
-        setProgress(inputProgress.value); 
+        setProgress(inputProgress.value);
     }
 }
-
 // Name polje
 inputName.addEventListener("focusout", function () {
     if (inputName.value.length > 2) {
-        isValid(0); 
+        isValid(0);
     } else {
         isNotValid(0);
     }
-
 });
 // Surname polje
 inputSurname.addEventListener("focusout", function () {
     if (inputSurname.value.length > 2) {
-        isValid(1); 
+        isValid(1);
     } else {
         isNotValid(1);
     }
@@ -79,23 +77,22 @@ inputSurname.addEventListener("focusout", function () {
 // Email polje
 inputEmail.addEventListener("focusout", function () {
     if (inputEmail.value.length > 2) {
-        isValid(2); 
+        isValid(2);
     } else {
         isNotValid(2);
     }
 
 });
-
-selectCheck1.addEventListener( 'change', function() {
-    if(this.checked) {
-        isValid(3); 
+selectCheck1.addEventListener('change', function () {
+    if (this.checked) {
+        isValid(3);
     } else {
         isNotValid(3);
     }
 });
-selectCheck2.addEventListener( 'change', function() {
-    if(this.checked) {
-        isValid(3); 
+selectCheck2.addEventListener('change', function () {
+    if (this.checked) {
+        isValid(3);
     } else {
         isNotValid(3);
     }
